@@ -1,19 +1,22 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import ScrollReveal from "@/components/ScrollReveal";
+
 import { toast } from "sonner";
 
-
 const heroImg = "/images/hero-flight.jpg";
-
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: "", email: "", phone: "", subject: "", message: "",
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,7 +29,13 @@ const ContactPage = () => {
     <main className="pt-24 pb-16 lg:pb-0">
       {/* Hero */}
       <section className="relative py-24 overflow-hidden">
-        <img src={heroImg} alt="Contact Fly Taghazout" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img
+          src={heroImg}
+          alt="Contact Fly Taghazout"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+        />
         <div className="absolute inset-0 bg-secondary/60" />
         <div className="relative z-10 container text-center text-primary-foreground">
           <h1 className="font-heading text-5xl md:text-6xl font-bold mb-4">
@@ -49,7 +58,7 @@ const ContactPage = () => {
                 </h2>
                 <div className="space-y-6">
                   {[
-                    { icon: Phone, label: "Téléphone", value: "+212 XX XXX XXX" },
+                    { icon: Phone, label: "Téléphone", value: "+212 661-607001" },
                     { icon: Mail, label: "Email", value: "contact@flytaghazout.com" },
                     { icon: MapPin, label: "Adresse", value: "Agadir / Taghazout, Maroc" },
                   ].map((item, i) => (
@@ -64,6 +73,29 @@ const ContactPage = () => {
                     </div>
                   ))}
                 </div>
+                {/* Google Maps */}
+                <div className="mt-10 rounded-xl overflow-hidden border border-border">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.5!2d-9.7816183!3d30.6066035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb2535aaf6eae95%3A0x9d054a257b1cf5d6!2sFly%20Taghazout!5e0!3m2!1sfr!2sma!4v1700000000000"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Localisation Fly Taghazout"
+                    className="w-full"
+                  />
+                </div>
+                <a
+                  href="https://www.google.com/maps/place/Fly+Taghazout/@30.6066035,-9.7816183,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-3 text-sm text-primary hover:underline transition-colors"
+                >
+                  <MapPin size={14} />
+                  Ouvrir dans Google Maps
+                </a>
               </ScrollReveal>
             </div>
 
@@ -100,7 +132,7 @@ const ContactPage = () => {
                         <Input
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+212 XX XXX XXX"
+                          placeholder="+212 661-607001"
                         />
                       </div>
                       <div>

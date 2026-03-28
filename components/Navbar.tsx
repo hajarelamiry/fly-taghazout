@@ -49,7 +49,7 @@ const Navbar = () => {
                 href={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors duration-300 hover:text-primary",
-                  pathname === item.href ? "text-primary" : scrolled ? "text-foreground" : "text-primary-foreground"
+                  pathname === item.href ? "text-primary" : "text-[#1e3a5f]"
                 )}
               >
                 {item.label}
@@ -67,7 +67,7 @@ const Navbar = () => {
             onClick={() => setMobileOpen(!mobileOpen)}
             className={cn(
               "lg:hidden p-2 rounded-lg transition-colors",
-              scrolled ? "text-foreground" : "text-primary-foreground"
+              "text-[#1e3a5f]"
             )}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
