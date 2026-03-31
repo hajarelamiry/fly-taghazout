@@ -739,9 +739,6 @@ video {
 .top-full {
   top: 100%;
 }
-.bottom-20 {
-  bottom: 5rem;
-}
 .z-10 {
   z-index: 10;
 }
@@ -844,6 +841,9 @@ video {
 .mt-24 {
   margin-top: 6rem;
 }
+.mt-3 {
+  margin-top: 0.75rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -855,9 +855,6 @@ video {
 }
 .mt-auto {
   margin-top: auto;
-}
-.mt-3 {
-  margin-top: 0.75rem;
 }
 .block {
   display: block;
@@ -1523,9 +1520,9 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
-.bg-\[\#25D366\] {
+.bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(37 211 102 / var(--tw-bg-opacity, 1));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
@@ -1823,6 +1820,10 @@ video {
 .tracking-widest {
   letter-spacing: 0.1em;
 }
+.text-\[\#1e3a5f\] {
+  --tw-text-opacity: 1;
+  color: rgb(30 58 95 / var(--tw-text-opacity, 1));
+}
 .text-accent {
   color: hsl(var(--accent));
 }
@@ -1888,14 +1889,6 @@ video {
 }
 .text-sidebar-foreground\/70 {
   color: hsl(var(--sidebar-foreground) / 0.7);
-}
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-.text-\[\#1e3a5f\] {
-  --tw-text-opacity: 1;
-  color: rgb(30 58 95 / var(--tw-text-opacity, 1));
 }
 .underline {
   text-decoration-line: underline;
@@ -2291,12 +2284,6 @@ video {
 
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3448,10 +3435,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-
-  .lg\:bottom-6 {
-    bottom: 1.5rem;
-  }
 
   .lg\:col-span-2 {
     grid-column: span 2 / span 2;

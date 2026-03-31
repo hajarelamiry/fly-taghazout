@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <img src="/images/logo.svg" alt="Fly Taghazout" className="h-12 w-auto brightness-0 invert" />
+            <img src="/images/logo-white-text.svg" className="h-12 w-auto" />
             <p className="text-secondary-foreground/70 text-sm leading-relaxed">
               Le ciel de Taghazout n'attend que vous. Vols en paramoteur biplace au-dessus des plus beaux paysages du Maroc.
             </p>
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-secondary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-secondary-foreground/50">
-          <p>© {new Date().getFullYear()} Fly Taghazout. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} HOVERSWITCH, appuyé par MONARK IT. Tous droits réservés.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">Mentions légales</a>
             <a href="#" className="hover:text-primary transition-colors">Politique de confidentialité</a>
