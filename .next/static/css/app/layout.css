@@ -574,14 +574,22 @@ video {
     --input: 205 30% 18%;
     --ring: 338 100% 58%;
   }
+  
   * {
   border-color: hsl(var(--border));
+    box-sizing: border-box;
 }
+
+  html {
+    overflow-x: hidden; 
+  }
+
 
   body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
     font-family: var(--font-body);
+    overflow-x: hidden;
 }
 
   h1, h2, h3, h4, h5, h6 {
@@ -856,6 +864,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mt-\[80px\] {
+  margin-top: 80px;
+}
 .block {
   display: block;
 }
@@ -988,6 +999,9 @@ video {
 }
 .min-h-svh {
   min-height: 100svh;
+}
+.min-h-\[calc\(100vh-80px\)\] {
+  min-height: calc(100vh - 80px);
 }
 .w-0 {
   width: 0px;

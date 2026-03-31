@@ -16,8 +16,7 @@ const HomePage = () => {
   return (
     <main className="pb-16 lg:pb-0">
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img
+      <section className="relative min-h-[calc(100vh-80px)] mt-[80px] flex items-center justify-center overflow-hidden"> <img
           src={heroImg}
           alt="Vol en paramoteur au-dessus de la côte de Taghazout au coucher du soleil"
           className="absolute inset-0 w-full h-full object-cover"
