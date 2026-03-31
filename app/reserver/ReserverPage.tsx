@@ -9,7 +9,6 @@ import { Calendar as CalendarUI } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
 import ScrollReveal from "@/components/ScrollReveal";
 import { toast } from "sonner";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const agadirImg = "/images/agadir-coast.jpg";
 const sunsetImg = "/images/sunset-couple.jpg";
@@ -35,7 +34,7 @@ const ReserverPage = () => {
   const [addMessage, setAddMessage] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | undefined>();
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
-  const { executeRecaptcha } = useGoogleReCaptcha();
+ 
 
   const canProceed = () => {
     switch (step) {
@@ -52,7 +51,6 @@ const ReserverPage = () => {
   };
 
  const handleSubmit = async () => {
-  const token = await executeRecaptcha("reservation");
 
   const res = await fetch("/api/reservation", {
     method: "POST",
@@ -66,7 +64,6 @@ const ReserverPage = () => {
       date: selectedDate,
       addPhotos,
       addMessage,
-      recaptchaToken: token,
     }),
   });
 
