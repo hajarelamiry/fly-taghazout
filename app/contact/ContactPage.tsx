@@ -9,7 +9,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 import { toast } from "sonner";
 
-const heroImg = "/images/hero-flight.jpg";
+const heroImg = "/images/hero-apropos.webp";
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",

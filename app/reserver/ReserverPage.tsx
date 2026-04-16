@@ -10,14 +10,14 @@ import { cn } from "@/lib/utils";
 import ScrollReveal from "@/components/ScrollReveal";
 import { toast } from "sonner";
 
-const agadirImg = "/images/agadir-coast.jpg";
-const sunsetImg = "/images/sunset-couple.jpg";
-const heroImg = "/images/hero-flight.jpg";
+const agadirImg = "/images/agadirImg.webp";
+const sunsetImg = "/images/EvenemenCiel.jpeg";
+const heroImg = "/images/hero-activites.webp";
 
 const experiences = [
-  { id: "decouverte", title: "Baptême Découverte", emotion: "Douce découverte", duration: "10-15 min", img: agadirImg },
-  { id: "instagram", title: "Baptême Instagram", emotion: "Moment magique", duration: "15 min", img: sunsetImg },
-  { id: "premium", title: "Baptême Premium", emotion: "Expérience exceptionnelle", duration: "20+ min", img: heroImg },
+  { id: "decouverte", title: "Baptême Découverte", emotion: "Douce découverte", duration: "15 min", img: agadirImg },
+  { id: "instagram", title: "Baptême Passion", emotion: "Moment intense", duration: "20 min", img: sunsetImg },
+  { id: "premium", title: "Baptême Sensation", emotion: "Expérience ultime", duration: "30 min", img: heroImg },
 ];
 
 const occasions = [
@@ -97,7 +97,7 @@ Vous serez contacté très bientôt pour la suite.`)
       <section className="py-8 border-b border-border">
         <div className="container">
           <div className="flex items-center justify-center gap-2 md:gap-4">
-            {["Expérience", "Date & heure", "Confirmation"].map((label, i) => (
+            {["Expérience", "Date de réservation", "Confirmation"].map((label, i) => (
               <div key={i} className="flex items-center gap-2">
                 <div className={cn(
                   "w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all",

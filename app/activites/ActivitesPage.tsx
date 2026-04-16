@@ -4,34 +4,33 @@ import { ArrowRight, Plane, Heart, Wind, Camera, Check, Users, Sparkles, Shield 
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const agadirImg = "/images/agadir-coast.jpg";
-const sunsetImg = "/images/sunset-couple.jpg";
-const dunesImg = "/images/dunes-flight.jpg";
-const atlasImg = "/images/atlas-flight.jpg";
-const heroImg = "/images/hero-flight.jpg";
+const agadirImg = "/images/agadirImg.webp";
+const sunsetImg = "/images/EvenemenCiel.jpeg";
+const heroImg = "/images/hero-activites.webp";
+const confortImg = "/images/confortImg.webp";
 
 const baptemes = [
   {
     title: "Baptême Découverte",
     emotion: "Douce découverte",
     desc: "Votre premier envol. Juste vous, le ciel et l'adrénaline… en douceur.",
-    points: ["Sensations douces, envol progressif", "Adapté à tous, même sans expérience", "Panoramas océaniques splendides"],
+    points: ["Sensations douces, envol progressif", "Adapté à tous, même sans expérience", "15 min - Vidéo GoPro - 900 MAD"],
     cta: "Je commence l'aventure",
     img: agadirImg,
   },
   {
-    title: "Baptême Instagram",
-    emotion: "Moment magique",
+    title: "Baptême Passion",
+    emotion: "Moment intense",
     desc: "Une lumière dorée, l'océan brillant, et vous… au-dessus de tout.",
-    points: ["Sunrise ou Sunset", "Pack média inclus", "Contenu 100% partageable"],
+    points: ["Sunrise ou Sunset", "Panoramas océaniques splendides", "20 min - Vidéo GoPro - Transport - 1200 MAD"],
     cta: "Je capture la magie",
     img: sunsetImg,
   },
   {
-    title: "Baptême Premium",
-    emotion: "Expérience exceptionnelle",
-    desc: "Plus haut, plus loin, plus longtemps. 20+ minutes d'émerveillement.",
-    points: ["Parcours étendu", "Expérience VIP personnalisée", "Champagne ou message personnalisé en option"],
+    title: "Baptême Sensation",
+    emotion: "Expérience ultime",
+    desc: "Adrénaline, liberté et pilotage. Une expérience complète pour ceux qui veulent aller plus loin.",
+    points: ["Épreuve VIP personnalisée", "Expérience enrichie et confortable", "30 minutes - Vidéo 360° - 1500 MAD"],
     cta: "Je choisis l'exception",
     img: heroImg,
   },
@@ -158,7 +157,7 @@ const ActivitesPage = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <img src={agadirImg} alt="Équipement paramoteur" className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover" loading="lazy" width={800} height={600} />
+              <img src={confortImg} alt="Équipement paramoteur" className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover" loading="lazy" width={800} height={600} />
             </ScrollReveal>
           </div>
         </div>
@@ -178,7 +177,7 @@ const ActivitesPage = () => {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
             {[
               { icon: Users, title: "Premiers vols", desc: "Découvrir le ciel en toute confiance" },
               { icon: Heart, title: "Couples & familles", desc: "Partager un moment inoubliable" },
@@ -187,7 +186,7 @@ const ActivitesPage = () => {
               { icon: Sparkles, title: "Marques & événements", desc: "Visibilité maximale et impact garanti" },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="text-center p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10">
+                <div className="h-full text-center p-6 rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10">
                   <item.icon className="mx-auto text-primary mb-4" size={28} />
                   <h4 className="font-heading font-semibold text-sm mb-2">{item.title}</h4>
                   <p className="text-primary-foreground/60 text-xs">{item.desc}</p>
@@ -198,7 +197,7 @@ const ActivitesPage = () => {
 
           <div className="text-center mt-12">
             <Button variant="premium" size="xl" asChild>
-              <Link href="/reserver">Réservez votre évasion</Link>
+              <Link href="/reserver">Réserver votre évasion</Link>
             </Button>
           </div>
         </div>

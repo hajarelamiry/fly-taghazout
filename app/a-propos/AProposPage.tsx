@@ -3,18 +3,19 @@ import Link from "next/link";
 import { Shield, Award, Heart, Eye, Mountain, Sun, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-const heroImg = "/images/hero-flight.jpg";
-const pilotImg = "/images/pilot-safety.jpg";
-const agadirImg = "/images/agadir-coast.jpg";
-const dunesImg = "/images/dunes-flight.jpg";
-const atlasImg = "/images/atlas-flight.jpg";
+const heroImg = "/images/hero-apropos.webp";
+const pilotImg = "/images/FlyTaghazout_extraordinaire.webp";
+const agadirImg = "/images/agadirImg.webp";
+const dunesImg = "/images/dunesImg.webp";
+const atlasImg = "/images/Publicite-aerienne.jpeg";
+const Flypassion = "/images/Flypassion.webp";
 
 const AProposPage = () => {
   return (
     <main className="pt-24 pb-16 lg:pb-0">
       {/* Hero */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
-        <img src={pilotImg} alt="À propos de Fly Taghazout" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+        <img src={heroImg} alt="À propos de Fly Taghazout" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
         <div className="absolute inset-0 bg-secondary/60" />
         <div className="relative z-10 container text-center text-primary-foreground">
           <h1 className="font-heading text-5xl md:text-6xl font-bold mb-4">
@@ -46,7 +47,7 @@ const AProposPage = () => {
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <img src={heroImg} alt="Vol paramoteur Fly Taghazout" className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover" loading="lazy" width={800} height={600} />
+              <img src={pilotImg} alt="Vol paramoteur Fly Taghazout" className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover" loading="lazy" width={800} height={600} />
             </ScrollReveal>
           </div>
         </div>
@@ -57,7 +58,7 @@ const AProposPage = () => {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
-              <img src={pilotImg} alt="Pilotes Fly Taghazout" className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover" loading="lazy" width={800} height={600} />
+              <img src={Flypassion} alt="Pilotes Fly Taghazout" className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover" loading="lazy" width={800} height={600} />
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">La passion</p>
@@ -81,7 +82,7 @@ const AProposPage = () => {
                 ))}
               </ul>
               <Button variant="default" size="lg" asChild>
-                <Link href="/reserver">Vivez l'expérience <ArrowRight size={18} /></Link>
+                <Link href="/reserver">Viver l'expérience <ArrowRight size={18} /></Link>
               </Button>
             </ScrollReveal>
           </div>
@@ -103,7 +104,7 @@ const AProposPage = () => {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {[
               { icon: Shield, title: "Paramoteur certifié", desc: "Appareil parmi les plus sûrs, offrant stabilité et contrôle." },
               { icon: Award, title: "Équipements complets", desc: "Casques, harnais, protection ventrale et communication." },
@@ -111,7 +112,7 @@ const AProposPage = () => {
               { icon: Heart, title: "Briefing personnalisé", desc: "Consignes claires pour se sentir serein dès le premier instant." },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-6 shadow-luxury hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                <div className="h-full bg-card rounded-2xl p-6 shadow-luxury hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
                   <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
                     <item.icon className="text-primary" size={24} />
                   </div>

@@ -1,7 +1,12 @@
 "use client";
 import Link from "next/link";
-import { Instagram, Facebook, Youtube, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Phone, Mail, MapPin } from "lucide-react";
 
+const TikTokIcon = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -15,14 +20,11 @@ const Footer = () => {
               Le ciel de Taghazout n'attend que vous. Vols en paramoteur biplace au-dessus des plus beaux paysages du Maroc.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <a href="https://www.instagram.com/flytaghazout?igsh=MWxwczMwaG1lZ2ptag==" className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
-                <Youtube size={18} />
+              <a href="https://www.tiktok.com/@flytaghazout?_r=1&_t=ZS-95aQLSLAXS5" className="w-10 h-10 rounded-full bg-secondary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <TikTokIcon size={18} />
               </a>
             </div>
           </div>
@@ -71,11 +73,29 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-secondary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-secondary-foreground/50">
-          <p>© {new Date().getFullYear()} HOVERSWITCH, appuyé par MONARK IT. Tous droits réservés.</p>
+          <p>
+            © {new Date().getFullYear()}{" "}
+            <a
+              href="https://extremesportsevents.ma/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white hover:text-primary transition-colors"
+            >
+              Etreme Sports Events
+            </a>
+            , appuyé par{" "}
+            <a
+              href="https://monarkit.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white hover:text-primary transition-colors"
+            >
+              MONARK IT
+            </a>
+            . Tous droits réservés.
+          </p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-primary transition-colors">Mentions légales</a>
             <a href="#" className="hover:text-primary transition-colors">Politique de confidentialité</a>
-            <a href="#" className="hover:text-primary transition-colors">CGV</a>
           </div>
         </div>
       </div>

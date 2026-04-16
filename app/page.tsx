@@ -1,16 +1,19 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronDown, Shield, Wind, Heart, Award, MapPin, Star, ArrowRight, Plane, Users, Camera } from "lucide-react";
+import { ChevronDown, ShieldCheck, Shield, Wind, Heart, Award, MapPin, Star, ArrowRight, Plane, Users, Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const agadirImg = "/images/agadir-coast.jpg";
-const sunsetImg = "/images/sunset-couple.jpg";
-const dunesImg = "/images/dunes-flight.jpg";
-const atlasImg = "/images/atlas-flight.jpg";
-const heroImg = "/images/hero-flight.jpg";
-const pilotImg = "/images/pilot-safety.jpg";
+const agadirImg = "/images/agadirImg.webp";
+const sunsetImg = "/images/EvenemenCiel.jpeg";
+const dunesImg = "/images/dunesImg.webp";
+const atlasImg = "/images/Publicite-aerienne.jpeg";
+const heroImg = "/images/heroflight.webp";
+const pilotImg = "/images/pilotImg.webp";
+const ValleAtlasImg = "/images/Vallees-de-lAtlas.webp";
+const FlytaghazoutImg = "/images/FlytaghazoutImg.webp";
+const OccasionsImg = "/images/OccasionsImg2.webp";
 
 const HomePage = () => {
   return (
@@ -31,7 +34,7 @@ const HomePage = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-sm md:text-base uppercase tracking-[0.3em] mb-4 text-primary-foreground/80 font-body">
-              Paramoteur biplace · Taghazout & Agadir
+              Paramoteur biplace · Taghazout - Agadir
             </p>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-6">
               Prenez de la<br />
@@ -94,7 +97,7 @@ const HomePage = () => {
             <ScrollReveal delay={0.2}>
               <div className="relative">
                 <img
-                  src={sunsetImg}
+                  src={FlytaghazoutImg}
                   alt="Vol en paramoteur au coucher du soleil"
                   className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover"
                   loading="lazy"
@@ -133,15 +136,15 @@ const HomePage = () => {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {[
               { icon: Plane, title: "Baptêmes de l'air", desc: "S'initier en douceur, admirer les paysages et ressentir ce frisson aérien incomparable.", cta: "Partir à l'aventure", img: agadirImg },
-              { icon: Heart, title: "Événements dans les airs", desc: "Mariages, gender reveal, surprises… Vivez des moments uniques dans les hauteurs.", cta: "Créer un moment unique", img: sunsetImg },
+              { icon: Heart, title: "EvènemenCiel", desc: "Mariages, gender reveal, surprises… Vivez des moments uniques dans les hauteurs.", cta: "Créer un moment unique", img: sunsetImg },
               { icon: Wind, title: "Voyages paramoteur", desc: "Explorez le Maroc vu du ciel, entre mer, dunes et montagnes.", cta: "Oser l'exceptionnel", img: dunesImg },
               { icon: Camera, title: "Publicité aérienne", desc: "Visibilité exceptionnelle pour votre marque au-dessus des plages.", cta: "Solutions B2B", img: atlasImg },
             ].map((activity, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="group bg-card rounded-2xl overflow-hidden shadow-luxury hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                <div className="h-full group bg-card rounded-2xl overflow-hidden shadow-luxury hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={activity.img}
@@ -189,7 +192,7 @@ const HomePage = () => {
             {[
               { title: "Plages d'Agadir", desc: "Vue panoramique sur l'océan à perte de vue, entre vagues, soleil et lumière dorée.", img: agadirImg },
               { title: "Dunes du Sud", desc: "Décor naturel majestueux, entre sable doré et lignes infinies sculptées par le vent.", img: dunesImg },
-              { title: "Vallées de l'Atlas", desc: "Contraste saisissant entre montagnes, lumières et reliefs impressionnants.", img: atlasImg },
+              { title: "Vallées de l'Atlas", desc: "Contraste saisissant entre montagnes, lumières et reliefs impressionnants.", img: ValleAtlasImg },
               { title: "Plaines du Haouz", desc: "Mosaïque de paysages naturels qui s'étend à l'horizon, calme et spectaculaire.", img: pilotImg },
             ].map((loc, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -232,12 +235,12 @@ const HomePage = () => {
                 Demande en mariage au coucher de soleil, annonce du bébé, surprise d'anniversaire, moment inoubliable en duo… Offrez à vos proches un souvenir qui restera gravé à jamais.
               </p>
               <Button variant="premium" size="lg" asChild>
-                <Link href="/reserver">Essayez l'aventure ultime</Link>
+                <Link href="/reserver">Essayer l'aventure ultime</Link>
               </Button>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <img
-                src={sunsetImg}
+                src={OccasionsImg}
                 alt="Vol romantique en paramoteur au coucher du soleil"
                 className="rounded-2xl shadow-luxury w-full aspect-[4/3] object-cover"
                 loading="lazy"
@@ -264,14 +267,15 @@ const HomePage = () => {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8 items-stretch">
             {[
               { icon: Wind, title: "Aventure", desc: "Un vol doux, fluide et panoramique au-dessus d'un des plus beaux littoraux du Maroc." },
               { icon: Shield, title: "Adrénaline maîtrisée", desc: "Le juste équilibre entre sensations aériennes et total confort, même pour les débutants." },
               { icon: Award, title: "Pilotes certifiés", desc: "Nos pilotes sont formés, certifiés ULM et respectent des standards stricts de sécurité." },
+              { icon: ShieldCheck, title: "Assurance Professionnelle", desc: "Notre structure est couverte par une Assurance Professionnelle Aérienne." },
             ].map((item, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="text-center p-8 rounded-2xl bg-card shadow-luxury hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+                <div className="h-full text-center p-8 rounded-2xl bg-card shadow-luxury hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary/10 flex items-center justify-center">
                     <item.icon className="text-primary" size={28} />
                   </div>
@@ -302,14 +306,14 @@ const HomePage = () => {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-stretch">
             {[
-              { name: "Sophie M.", text: "Une expérience absolument magique. Le coucher de soleil vu du ciel, c'était irréel. Les pilotes sont incroyablement professionnels.", stars: 5 },
-              { name: "Karim A.", text: "J'ai fait ma demande en mariage pendant le vol. Elle a dit oui ! Merci à toute l'équipe pour cette organisation parfaite.", stars: 5 },
-              { name: "Claire & Tom", text: "On avait un peu peur, mais dès le décollage, c'était que du bonheur. Doux, sécurisé et grandiose. On recommande à 100%.", stars: 5 },
+              { name: "Sarah Moubik", text: "WHAT AN EXPERIENCE !! I was anxious in the beginning but soon Noureddine made me feel comfortable and safe. The fly felt like a surreal sensation seeing The villages from above is something to see at least once in a lifetime .. maybe MORE!!", stars: 5 },
+              { name: "Rachid Charif", text: "Hovering over Aghroud and its vast, stretching beach is an experience everyone should live at least once. Nour Eddine led the flight with great caution and joy, which made it even more fun and adventurous.", stars: 5 },
+              { name: "Soukaina L.", text: "Such an amazing experience! Fun, thrilling, with breathtaking views.The owner is extremely kind, professional, and passionate about what he does which makes the whole experience even better. I enjoyed every single moment. Definitely recommend!", stars: 5 },
             ].map((testimonial, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-8 shadow-luxury">
+                <div className="h-full bg-card rounded-2xl p-8 shadow-luxury">
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.stars }).map((_, j) => (
                       <Star key={j} className="fill-accent text-accent" size={18} />
@@ -320,6 +324,11 @@ const HomePage = () => {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="https://www.google.com/search?sca_esv=4074d84388868a32&biw=1524&bih=1020&sxsrf=ANbL-n6KKCh497_dBoBHFgBhwaBLBNNjBg:1776340269612&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOcOGxi3x9_NPWDmdY6R-l-PYp29ZM1FQgMtCBtJEwjjuf3fLVYuZVA5-kF8J7yns9QellZwMf-yhzHzGayDkU9PcPVY-&q=Fly+Taghazout+Reviews&sa=X&ved=2ahUKEwj6w5SWp_KTAxX30QIHHVgDLnIQ0bkNegQIHBAH" target="_blank" rel="noopener noreferrer">Découvrir tous nos avis <ArrowRight size={18} /></Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -337,7 +346,7 @@ const HomePage = () => {
           </ScrollReveal>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {[heroImg, dunesImg, atlasImg, sunsetImg, agadirImg, pilotImg, heroImg, dunesImg].map((img, i) => (
+            {[heroImg, dunesImg, atlasImg, sunsetImg, agadirImg, pilotImg, heroImg, dunesImg, ValleAtlasImg].map((img, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <div className="group relative rounded-xl overflow-hidden aspect-square cursor-pointer">
                   <img

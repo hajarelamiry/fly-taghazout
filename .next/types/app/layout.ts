@@ -1,4 +1,4 @@
-// File: C:\PFE\to-do\Fly Taghazout\remix-of-elevate-morocco\app\layout.tsx
+// File: C:\Téléchargements\FLY TAGHAZOUT\fly-taghazout\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
